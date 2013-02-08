@@ -1,0 +1,3 @@
+Animal Class
+	-It's possible to hit an attack and do 0 damage, this affects all attacks that use the base algorithm
+	-Default attacks do more damage than desired
