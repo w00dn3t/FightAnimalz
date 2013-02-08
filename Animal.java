@@ -35,7 +35,7 @@ public abstract class Animal {
 		int preDmg = rdzr()*str; 
 		if (cth(enemy)){
 			enemy.health -= preDmg;
-			return name + " strikes for " + preDmg + "damage!";
+			return name + " strikes for " + preDmg + " damage!";
 		}
 		return "The ability misses!";
 	}
@@ -45,7 +45,7 @@ public abstract class Animal {
 		int preDmg = rdzr()*str; 
 		if (cth(enemy)){
 			enemy.health -= preDmg;
-			return name + " strikes for " + preDmg + "damage! Strength was raised to " + str + " Agility was lowered to " + agil; 
+			return name + " strikes for " + preDmg + " damage! Strength was raised to " + str + " Agility was lowered to " + agil; 
 		}
 		return "The ability misses! Strength was raised to " + str + " Agility was lowered to " + agil;
 	}

@@ -7,7 +7,7 @@ public class ThreeToedSloth extends Animal{
 	public ThreeToedSloth(String name) {
 		super(name, "Three Toed Sloth", 4, 0, 110);
 		abilList.add("Normal Strike");
-		abilList.add("Ferocious Strike");
+		abilList.add("Drop");
 		abilList.add("Climb");
 		abilList.add("Recuperate");
 
@@ -35,7 +35,7 @@ public class ThreeToedSloth extends Animal{
 		this.agil -= 10 * heightCounter;
 		heightCounter = 0;
 		enemy.health -= preDmg;
-		return name + " falls from the trees for " + preDmg + " damage!\nIt's agility returns to " + this.getAgil(); 
+		return name + " falls from the trees for " + preDmg + " damage!\nIt's agility returns to " + this.getAgil() + "!"; 
 	}
 	
 	public String defAbilOne(Animal enemy){
