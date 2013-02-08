@@ -7,7 +7,7 @@ public class Aardvark extends Animal{
 	private ArrayList<String> abilList = new ArrayList();
 
 	public Aardvark(String name) {
-		super(name, "Aardvark", 6, 15, 90);
+		super(name, "Aardvark", 6, 15, 7, 90);
 		abilList.add("Normal Strike");
 		abilList.add("Ferocious Strike");
 		abilList.add("Increase Safety");

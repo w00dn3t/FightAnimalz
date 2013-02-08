@@ -11,9 +11,9 @@ public class ConsoleFight {
 		System.out.println(ani2.listAbil());
 		Scanner sc = new Scanner(System.in);
 		int inp = 0;
-		while (ani1.getHP() > 0 && ani2.getHP() > 0){
-			System.out.println(ani1.getName() + " has " + ani1.getHP() + " health; choose an ability!");
-			if (ani1.getHP() < 0 && ani1.getHP() > -50){
+		while (ani1.getHealth() > 0 && ani2.getHealth() > 0){
+			System.out.println(ani1.getName() + " has " + ani1.getHealth() + " health; choose an ability!");
+			if (ani1.getHealth() < 0 && ani1.getHealth() > -50){
 				System.out.println("Beastial wrath is engaged Strength buffed for 15!");
 				ani1.beastialWrath();
 			}
@@ -27,8 +27,8 @@ public class ConsoleFight {
 			else if (inp == 40)
 				System.out.println(ani1.defAbilTwo(ani2));
 			
-			System.out.println(ani2.getName() + " has " + ani2.getHP() + " health; choose an ability!");
-			if (ani2.getHP() < 0 && ani2.getHP() > -50){
+			System.out.println(ani2.getName() + " has " + ani2.getHealth() + " health; choose an ability!");
+			if (ani2.getHealth() < 0 && ani2.getHealth() > -50){
 				System.out.println("Beastial wrath is engaged Strength buffed for 15!");
 				ani2.beastialWrath();
 			}
@@ -41,12 +41,11 @@ public class ConsoleFight {
 				System.out.println(ani2.defAbilOne(ani1));
 			else if (inp == 40)
 				System.out.println(ani2.defAbilTwo(ani1));
-
 		}
-		System.out.println(ani1.getName() + " has " + ani1.getHP() + " health! " + ani2.getName() + " has " + ani2.getHP() + " health!");
-		if (ani1.getHP() > ani2.getHP() && ani1.getHP() > 0)
+		System.out.println(ani1.getName() + " has " + ani1.getHealth() + " health! " + ani2.getName() + " has " + ani2.getHealth() + " health!");
+		if (ani1.getHealth() > ani2.getHealth() && ani1.getHealth() > 0)
 			System.out.println(ani1.getName() + " has won the match!");
-		if (ani2.getHP() > ani1.getHP() && ani2.getHP() > 0)
+		if (ani2.getHealth() > ani1.getHealth() && ani2.getHealth() > 0)
 			System.out.println(ani2.getName() + " has won the match!");
 		else
 			System.out.println(ani1.getName() + " and " + ani2.getName() + " lay dead and cold on the hard African sands!");

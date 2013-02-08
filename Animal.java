@@ -6,11 +6,13 @@ public abstract class Animal {
 	protected int str;
 	protected int agil;
 	protected int health;
+	protected int intel;
 
 	//Raws -- Raw Stats unmodified
 	final private int rstr;
 	final private int ragil;
 	final private int rhealth;
+	final private int rintel;
 	//End Raw
 	
 	//Identity
@@ -18,15 +20,17 @@ public abstract class Animal {
 	protected String type;
 	protected ArrayList<String> abilList = new ArrayList();
 
-	public Animal(String name, String type, int str, int agil, int health){
+	public Animal(String name, String type, int str, int agil, int intel, int health){
 		this.str = str;
 		this.agil = agil;
 		this.name = name;
 		this.type = type;
 		this.health = health;
+		this.intel = intel;
 		rstr = str;
 		ragil = agil;
 		rhealth = health;
+		rintel = intel;
 	}
 	
 	//General Abilities
@@ -79,6 +83,13 @@ public abstract class Animal {
 		return true;	
 	}
 	
+	protected boolean cth(Animal targ, int mult){
+		Random rand = new Random();
+		if (rand.nextInt(10)*targ.agil > 100 + mult)
+			return false;
+		return true;	
+	}
+	
 	
 	//Accessors
 	public int getStr(){
@@ -87,13 +98,26 @@ public abstract class Animal {
 	public int getAgil(){
 		return agil;
 	}
-	public int getHP(){
+	public int getHealth(){
 		return health;
+	}
+	public int getRHealth(){
+		return rhealth;
 	}
 	public String getName(){
 		return name;
 	}
-
+	public String getType(){
+		return type;
+	}
+	public int getIntel(){
+		return intel;
+	}
+	
+	public String listStatus(){
+		return getName() + " the " + getType() + "'s status:\nHealth:\t" + getHealth() +"\nStrength:\t" + getStr() + "\nAgility:\t" + getAgil() + "\nIntellegence:\t" + getIntel() + "\n";
+	}
+	
 	public String listAbil(){
 		String temp = getName() + "'s abilities in order:\n";
 		int i = 10;

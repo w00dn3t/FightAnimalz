@@ -7,7 +7,7 @@ public class ScimitarOryx extends Animal{
 	private ArrayList<String> abilList = new ArrayList();
 
 	public ScimitarOryx(String name) {
-		super(name, "Scimitar Oryx", 12, 2, 150);
+		super(name, "Scimitar Oryx", 12, 2, 4, 150);
 		abilList.add("Vicous Strike");
 		abilList.add("Destroy Agility");
 		abilList.add("Increase Safety");

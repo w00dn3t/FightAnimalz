@@ -5,7 +5,7 @@ public class ThreeToedSloth extends Animal{
 	private int heightCounter = 0;
 
 	public ThreeToedSloth(String name) {
-		super(name, "Three Toed Sloth", 4, 0, 110);
+		super(name, "Three Toed Sloth", 4, 0, 13, 110);
 		abilList.add("Normal Strike");
 		abilList.add("Drop");
 		abilList.add("Climb");
